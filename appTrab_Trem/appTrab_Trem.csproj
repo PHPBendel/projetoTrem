@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BB5CFE5-04BF-4475-85F2-150309769DD0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>appTrab_Trem</RootNamespace>
+    <AssemblyName>appTrab_Trem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD16394DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD16394DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLLCidades.cs" />
+    <Compile Include="BLLPassageiro.cs" />
+    <Compile Include="BLLTrens.cs" />
+    <Compile Include="BLLViagens.cs" />
+    <Compile Include="Cidade.cs" />
+    <Compile Include="Consultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas.Designer.cs">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DALCidades.cs" />
+    <Compile Include="DALPassageiros.cs" />
+    <Compile Include="DALTrens.cs" />
+    <Compile Include="DALViagens.cs" />
+    <Compile Include="Frm_ManutencaoTrens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ManutencaoTrens.Designer.cs">
+      <DependentUpon>Frm_ManutencaoTrens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_PaginaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_PaginaPrincipal.Designer.cs">
+      <DependentUpon>Frm_PaginaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ManutencaoCidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ManutencaoCidades.Designer.cs">
+      <DependentUpon>Frm_ManutencaoCidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ManutencaoViagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ManutencaoViagens.Designer.cs">
+      <DependentUpon>Frm_ManutencaoViagens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Passageiro.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trem.cs" />
+    <Compile Include="Validacao.cs" />
+    <Compile Include="Viagens.cs" />
+    <EmbeddedResource Include="Consultas.resx">
+      <DependentUpon>Consultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoTrens.resx">
+      <DependentUpon>Frm_ManutencaoTrens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_PaginaPrincipal.resx">
+      <DependentUpon>Frm_PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoCidades.resx">
+      <DependentUpon>Frm_ManutencaoCidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ManutencaoViagens.resx">
+      <DependentUpon>Frm_ManutencaoViagens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="BD16394DataSet.xsc">
+      <DependentUpon>BD16394DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD16394DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD16394DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD16394DataSet.xss">
+      <DependentUpon>BD16394DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proximo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
